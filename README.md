@@ -2,6 +2,14 @@
 # Comment Scanner
 
 Comment Scanner is a Python module designed to extract comments from source code files of various types.
+
+## Features
+- **Multi-language Support**: Works with any programming language.
+- **Comment Types**: Supports single-line, in-line and multi-line comments.
+- **Line Numbers**: Provides the line number for each comment found.
+- **CLI Tool**: Fetch comments from a file via the command line.
+
+
 ## Installation
 
 Install comment scanner using pip/pip3.
@@ -11,7 +19,7 @@ Install comment scanner using pip/pip3.
 ```
 
 
-## Usage
+## API Usage
 Comment can be fetched from a source code file or from string text.
 
 ```python
@@ -31,7 +39,15 @@ Comment(comment text, line_no, is_multiline)
 ```
 In case of multi-line comment line_no is of List type containing all the line from the start of the comment till the end comment line.
 
-### Mime Type
+## CLI Usage
+```bash
+comment_scanner <file_path> [-m or --mime <mime_type>]
+```
+- <file_path>: The path to the code file.
+- -m or --mime <mime_type>: (Optional) The MIME type of the file.
+
+
+## Mime Type
 Comment scanner uses python-magic module under the hood to find the mime type of a file and it works for most cases.
 
 But the user can describe the mime type of the string or file by using `mime` parameter. For supported mime-types, refer to the supported programming laguage section.

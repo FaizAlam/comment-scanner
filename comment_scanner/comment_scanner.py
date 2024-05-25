@@ -101,12 +101,19 @@ def main():
     parser = argparse.ArgumentParser(
         description="Extracts comments from files and prints them to stdout"
     )
-    parser.add_argument('filename', nargs='+', help='File to extract comments from')
+    parser.add_argument('filename', nargs='+',
+                        help='File to extract comments from', type=str)
+    parser.add_argument('-m', '--mime',
+                        help='MIME type of file(s) to extract comments from')
+
     args = parser.parse_args()
 
     for filename in args.filename:
         try:
-            comments = fetch_from_file(filename)
+            if args.mime:
+                comments = fetch_from_file(filename, args.mime)
+            else:
+                comments = fetch_from_file(filename)
             return comments
         except Error as exc:
             sys.stderr.write(str(exc))
