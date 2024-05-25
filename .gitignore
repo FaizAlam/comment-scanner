@@ -7,3 +7,4 @@ venv/
 build/
 dist/
 comment_scanner.egg-info/
+comment_scanner.egg-info/*

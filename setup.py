@@ -8,7 +8,7 @@ def readme():
 
 setup(
     name='comment_scanner',
-    version='0.1',
+    version='0.2',
     install_requires=[
         'python-magic-bin>=0.4.14',
     ],

@@ -47,7 +47,7 @@ class Comment():
         return self._multiline
 
     def __str__(self) -> str:
-        return self.text
+        return self._text
 
     def __repr__(self) -> str:
         return f'Comment({self._text}, {self._line_number}, {self._multiline})'
