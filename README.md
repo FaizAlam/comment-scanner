@@ -15,7 +15,7 @@ Comment Scanner is a Python module designed to extract comments from source code
 Install comment scanner using pip/pip3.
 
 ```bash
-pip3 install comment_scanner
+pip install comment-scanner
 ```
 
 
